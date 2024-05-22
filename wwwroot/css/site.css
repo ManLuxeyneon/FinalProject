@@ -1,0 +1,325 @@
+/* INDEX DESIGN */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+h2, p {
+    color: black;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1;
+}
+
+header {
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+    header .logo {
+        position: absolute;
+        top: 0px; 
+        left: 0px; 
+        width: 120px; 
+        height: 40px;
+    }
+
+    header .nav a {
+        color: black;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 1px;
+        padding: 2px 18px;
+        border-radius: 20px;
+        transition: 0.3s;
+        transition-property: background;
+    }
+
+        header .nav a:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        header .nav a:hover {
+            background: #EADBC8;
+        }
+
+.content {
+    max-width: 650px;
+    margin: 60px 100px;
+}
+
+    .content .info h2 {
+        color: #31363F;
+        font-size: 30px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        line-height: 14px;
+        margin-bottom: 10px;
+    }
+
+        .content .info h2 span {
+            color: #1A4D2E;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+    .content .info p {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+button {
+    position: relative;
+    padding: 15px 35px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #2F5C2F;
+    background-color: transparent;
+    border: 3px solid #2F5C2F;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+    button::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 10px;
+        left: 10px;
+        background-color: #D5A084;
+        border-radius: 8px;
+        z-index: -1;
+        transition: all 0.5s;
+    }
+
+    button:hover::after {
+        top: 0;
+        left: 0;
+    }
+
+.icon-1 {
+    position: absolute;
+    width: 15%;
+    top: 10px;
+    right: 15px;
+    color: #2F5C2F;
+    transform-origin: 100% 100%;
+    transform: rotate(-25deg) translateX(120%) translateY(20%);
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+button:hover .icon-1 {
+    width: 25%;
+    transform: rotate(10deg) translateX(110%) translateY(-40%);
+}
+
+.icon-2 {
+    position: absolute;
+    width: 15%;
+    top: 20px;
+    left: 10px;
+    color: #2F5C2F;
+    transform-origin: 100% 100%;
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+button:hover .icon-2 {
+    width: 50%;
+    top: -40px;
+    left: -80px;
+    transform: rotate(90deg);
+    z-index: 1;
+}
+
+.book {
+    position: fixed;
+    right: 300px;
+    bottom: 380px;
+    width: 400px;
+    height: auto;
+    z-index: 100;
+}
+
+.hidden-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+    .hidden-container .content {
+        text-align: center;
+    }
+
+    .hidden-container h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .hidden-container p {
+        color: #666;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+/* LOGIN DESIGN */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.title {
+    font-size: 28px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+    .title::before, .title::after {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        left: 0px;
+        background-color: #2F5C2F;
+    }
+
+    .title::before {
+        width: 18px;
+        height: 18px;
+        background-color: #2F5C2F;
+    }
+
+    .title::after {
+        width: 18px;
+        height: 18px;
+        animation: pulse 1s linear infinite;
+    }
+
+.message, .signin {
+    color: rgba(88, 87, 87, 0.822);
+    font-size: 14px;
+}
+
+.signin {
+    text-align: center;
+}
+
+    .signin a {
+        color: royalblue;
+    }
+
+        .signin a:hover {
+            text-decoration: underline royalblue;
+        }
+
+.flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+}
+
+.form label {
+    position: relative;
+}
+
+    .form label .input {
+        width: 100%;
+        padding: 10px 10px 20px 10px;
+        outline: 0;
+        border: 1px solid rgba(105, 105, 105, 0.397);
+        border-radius: 10px;
+    }
+
+        .form label .input + span {
+            position: absolute;
+            left: 10px;
+            top: 15px;
+            color: grey;
+            font-size: 0.9em;
+            cursor: text;
+            transition: 0.3s ease;
+        }
+
+        .form label .input:placeholder-shown + span {
+            top: 15px;
+            font-size: 0.9em;
+        }
+
+        .form label .input:focus + span, .form label .input:valid + span {
+            top: 30px;
+            font-size: 0.7em;
+            font-weight: 600;
+        }
+
+        .form label .input:valid + span {
+            color: green;
+        }
+
+.submit {
+    border: none;
+    outline: none;
+    background-color: #2F5C2F;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+}
+
+    .submit:hover {
+        background-color: #4F6F52;
+    }
+
+@keyframes pulse {
+    from {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}

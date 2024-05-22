@@ -1,0 +1,24 @@
+﻿@model FinalProject.Models.LoginViewModel
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<form class="form" method="POST" action="/Home/Login">
+    <p class="title">Login</p>
+    <p class="message">Enter your login details below.</p>
+
+    <label>
+        <input required placeholder="Email" type="email" class="input"  />
+        <span>Email</span>
+    </label>
+
+    <label>
+        <input required placeholder="Password" type="password" class="input" ]/>
+        <span>Password</span>
+    </label>
+
+    <button type="submit" class="submit">Submit</button>
+
+    <p class="signin">Don't have an account? <a href="@Url.Action("Register", "Home")">Register</a></p>
+</form>
